@@ -1,4 +1,15 @@
 # Title: Midterm Project: Programming for Data Science
+## Project information:
+student: Junchen Gu
+Course: INF 1340, Programming for Data Science
+Instructor: Maher Elshakankiri
+## Explanation of the Project: 
+The project will contain several functions that will start by opening a given dataset file and write a txt file for the user.
+The functions will individually analyze the given column in the dataset and output the result to the output file and print on the screen for the user to see.
+The simple data analysis jobs did not use python built in functions. 
+## How to use the functions:
+To use the function, the user may simply call the name of the function and will be prometed to answer the ame of the input dataset,
+output dataset, the specific column needed to be analyzed. 
 ## Installation: Install Pandas Library
 ```bash
 import pandas as pd
