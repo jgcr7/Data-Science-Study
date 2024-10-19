@@ -1,0 +1,11 @@
+title: midterm-project
+x-stoplight:
+  id: ebli5c33vha3o
+type: object
+properties:
+  id:
+    type: string
+    x-stoplight:
+      id: jxs6oq56k6esh
+examples:
+  - id: string

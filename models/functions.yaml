@@ -1,0 +1,16 @@
+title: functions
+x-stoplight:
+  id: nqzxky52298cr
+type: object
+properties:
+  id:
+    type: string
+    x-stoplight:
+      id: 5ejse38ed7z60
+  '':
+    type: string
+    x-stoplight:
+      id: 23uifhg4ti2za
+examples:
+  - id: string
+    '': string
