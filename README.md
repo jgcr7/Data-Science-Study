@@ -119,3 +119,124 @@ def selection_sort(df, attribute): #create function to sort numbers
   print(value)
 write_file(selection_sort(df, attribute))
 ```
+## Example of running the program:
+```python
+from google.colab import drive
+drive.mount('/drive', force_remount=True)
+
+# Change the current working directory to the specified path within Google Drive.
+# This allows easy access to files stored in the 'Chapter7' folder under 'Colab Notebooks/Groner/Lecture'.
+%cd '/drive/MyDrive/Colab Notebooks/'
+```
+Mounted at /drive
+/drive/MyDrive/Colab Notebooks
+```python
+df, attribute = read_file()
+```
+Please input the name of the file:cancer-probabilities.csv
+Please input the name of the column you want to analyze:Probability of Cancer
+```python
+write_file(max_value(df, attribute))
+```
+Please input the name of the file:cancer-probabilities.csv
+Please input the name of the column you want to analyze:Probability of Cancer
+Please input the name of the output file:output.txt
+0.9
+```python
+write_file(min_value(df, attribute))
+```
+Please input the name of the file:cancer-probabilities.csv
+Please input the name of the column you want to analyze:Probability of Cancer
+Please input the name of the output file:output.txt
+0.01
+```python
+write_file(calc_sum(df, attribute))
+```
+Please input the name of the file:cancer-probabilities.csv
+Please input the name of the column you want to analyze:Probability of Cancer
+20.360000000000003
+Please input the name of the output file:output.txt
+```python
+write_file(sorted_decimal(df, attribute))
+```
+Please input the name of the file:cancer-probabilities.csv
+Please input the name of the column you want to analyze:Probability of Cancer
+0.80
+0.20
+0.10
+0.90
+0.40
+0.05
+0.75
+0.30
+0.02
+0.85
+0.45
+0.01
+0.90
+0.35
+0.03
+0.70
+0.40
+0.05
+0.80
+0.30
+0.02
+0.90
+0.40
+0.01
+0.75
+0.35
+0.03
+0.80
+0.40
+0.05
+0.90
+0.30
+0.02
+0.75
+0.45
+0.01
+0.80
+0.35
+0.03
+0.90
+0.40
+0.05
+0.70
+0.30
+0.02
+0.80
+0.40
+0.01
+0.75
+0.35
+Please input the name of the output file:output.txt
+```python
+write_file(calc_mean(df, attribute))
+```
+Please input the name of the file:cancer-probabilities.csv
+Please input the name of the column you want to analyze:Probability of Cancer
+0.40720000000000006
+Please input the name of the output file:output.txtv
+```python
+write_file(calc_sd(df, attribute))
+```
+Please input the name of the file:cancer-probabilities.csv
+Please input the name of the column you want to analyze:Probability of Cancer
+0.3222299799832412
+Please input the name of the output file:output.txt
+```python
+write_file(calc_median(df, attribute))
+```
+Please input the name of the file:cancer-probabilities.csv
+Please input the name of the column you want to analyze:Probability of Cancer
+0.4
+Please input the name of the output file:output.txt
+```python
+write_file(selection_sort(df, attribute))
+```
+Please input the name of the file:cancer-probabilities.csv
+Please input the name of the column you want to analyze:Probability of Cancer
+[0.01, 0.01, 0.01, 0.01, 0.02, 0.02, 0.02, 0.02, 0.03, 0.03, 0.03, 0.05, 0.05, 0.05, 0.05, 0.1, 0.2, 0.3, 0.3, 0.3, 0.3, 0.35, 0.35, 0.35, 0.35, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.45, 0.45, 0.7, 0.7, 0.75, 0.75, 0.75, 0.75, 0.8, 0.8, 0.8, 0.8, 0.8, 0.85, 0.9, 0.9, 0.9, 0.9, 0.9]
+Please input the name of the output file:output.txt
