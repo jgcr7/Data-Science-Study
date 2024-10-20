@@ -1,22 +1,33 @@
 # Title: Midterm Project: Programming for Data Science
+
 ## Project information:
+
 student: Junchen Gu
 Course: INF 1340, Programming for Data Science
 Instructor: Maher Elshakankiri
-## Explanation of the Project: 
+
+## Explanation of the Project:
+
 The project will contain several functions that will start by opening a given dataset file and write a txt file for the user.
 The functions will individually analyze the given column in the dataset and output the result to the output file and print on the screen for the user to see.
-The simple data analysis jobs did not use python built in functions. 
+The simple data analysis jobs did not use python built in functions.
+
 ## How to use the functions:
+
 To use the function, the user may simply call the name of the function and will be prometed to answer the ame of the input dataset,
-output dataset, the specific column needed to be analyzed. 
+output dataset, the specific column needed to be analyzed.
+
 ## Installation: Install Pandas Library
+
 ```bash
 import pandas as pd
 ```
+
 ## Usage: eight functions to analyze numerical values inside a dataset
+
 ## Function 1: function to read file using pandas
-``` python
+
+```python
 def read_file(): #create function for input handling
   file = input('Please input the name of the file:') #input the file name
   df = pd.read_csv(file) #read the file using panda
@@ -25,7 +36,9 @@ def read_file(): #create function for input handling
   return df, attribute
 df, attribute = read_file()
 ```
+
 ## Function 2: function to write output file and print to the user to see
+
 ```python
 def write_file(content): #cerate a function to output a new file
   outfile = input('Please input the name of the output file:') #input the file name
@@ -34,7 +47,9 @@ def write_file(content): #cerate a function to output a new file
   fout.close()
   print(content) #3 read the output
 ```
+
 ## Function 3: function to calculate maximum value
+
 ```python
 df, attribute = read_file()
 def max_value(df, attribute): #create the function
@@ -48,7 +63,9 @@ def max_value(df, attribute): #create the function
 max_value(df, attribute)
 write_file(max_value(df, attribute))
 ```
+
 ## Function 4: calculate the minimum value
+
 ```python
 df, attribute = read_file()
 def min_value(df, attribute): #create function to calculate minimum
@@ -62,7 +79,9 @@ def min_value(df, attribute): #create function to calculate minimum
 min_value(df, attribute)
 write_file(min_value(df, attribute))
 ```
+
 ## Function 5: calculate sum
+
 ```python
 df, attribute = read_file()
 def calc_sum(df, attribute): #create function to calculate sum
@@ -73,7 +92,9 @@ def calc_sum(df, attribute): #create function to calculate sum
   print(sum_value)
 write_file(calc_sum(df, attribute))
 ```
+
 ## Function 6: standardize decimal points for all numerical values
+
 ```python
 df, attribute = read_file()
 def sorted_decimal(df, attribute): #create function to allow two decimal points
@@ -83,7 +104,9 @@ def sorted_decimal(df, attribute): #create function to allow two decimal points
     print(formatted_number)
 write_file(sorted_decimal(df, attribute))
 ```
+
 ## Function 7: calculate mean
+
 ```python
 df, attribute = read_file()
 def calc_mean(df, attribute): #create function to calculate mean
@@ -91,7 +114,9 @@ def calc_mean(df, attribute): #create function to calculate mean
   print(mean_value)
 write_file(calc_mean(df, attribute))
 ```
+
 ## Function 8: calculate standard deviation
+
 ```python
 df, attribute = read_file()
 def calc_sd(df, attribute): #create function to calculate standard deviation
@@ -105,7 +130,9 @@ def calc_sd(df, attribute): #create function to calculate standard deviation
   print(sd_value)
 write_file(calc_sd(df, attribute))
 ```
+
 ## Function 9: calculate median
+
 ```python
 df, attribute = read_file()
 def calc_median(df, attribute): #create function to calculate median value
@@ -116,7 +143,9 @@ def calc_median(df, attribute): #create function to calculate median value
   print(median_value)
 write_file(calc_median(df, attribute))
 ```
+
 ## Function 10: Sort numerical values from small to large
+
 ```python
 df, attribute = read_file()
 def selection_sort(df, attribute): #create function to sort numbers
@@ -130,7 +159,9 @@ def selection_sort(df, attribute): #create function to sort numbers
   print(value)
 write_file(selection_sort(df, attribute))
 ```
+
 ## Example of running the program:
+
 ```python
 from google.colab import drive
 drive.mount('/drive', force_remount=True)
@@ -139,37 +170,48 @@ drive.mount('/drive', force_remount=True)
 # This allows easy access to files stored in the 'Chapter7' folder under 'Colab Notebooks/Groner/Lecture'.
 %cd '/drive/MyDrive/Colab Notebooks/'
 ```
+
 Mounted at /drive
 /drive/MyDrive/Colab Notebooks
+
 ```python
 df, attribute = read_file()
 ```
+
 Please input the name of the file:cancer-probabilities.csv
 Please input the name of the column you want to analyze:Probability of Cancer
+
 ```python
 write_file(max_value(df, attribute))
 ```
+
 Please input the name of the file:cancer-probabilities.csv
 Please input the name of the column you want to analyze:Probability of Cancer
 Please input the name of the output file:output.txt
 0.9
+
 ```python
 write_file(min_value(df, attribute))
 ```
+
 Please input the name of the file:cancer-probabilities.csv
 Please input the name of the column you want to analyze:Probability of Cancer
 Please input the name of the output file:output.txt
 0.01
+
 ```python
 write_file(calc_sum(df, attribute))
 ```
+
 Please input the name of the file:cancer-probabilities.csv
 Please input the name of the column you want to analyze:Probability of Cancer
 20.360000000000003
 Please input the name of the output file:output.txt
+
 ```python
 write_file(sorted_decimal(df, attribute))
 ```
+
 Please input the name of the file:cancer-probabilities.csv
 Please input the name of the column you want to analyze:Probability of Cancer
 0.80
@@ -223,31 +265,39 @@ Please input the name of the column you want to analyze:Probability of Cancer
 0.75
 0.35
 Please input the name of the output file:output.txt
+
 ```python
 write_file(calc_mean(df, attribute))
 ```
+
 Please input the name of the file:cancer-probabilities.csv
 Please input the name of the column you want to analyze:Probability of Cancer
 0.40720000000000006
 Please input the name of the output file:output.txtv
+
 ```python
 write_file(calc_sd(df, attribute))
 ```
+
 Please input the name of the file:cancer-probabilities.csv
 Please input the name of the column you want to analyze:Probability of Cancer
 0.3222299799832412
 Please input the name of the output file:output.txt
+
 ```python
 write_file(calc_median(df, attribute))
 ```
+
 Please input the name of the file:cancer-probabilities.csv
 Please input the name of the column you want to analyze:Probability of Cancer
 0.4
 Please input the name of the output file:output.txt
+
 ```python
 write_file(selection_sort(df, attribute))
 ```
+
 Please input the name of the file:cancer-probabilities.csv
 Please input the name of the column you want to analyze:Probability of Cancer
-[0.01, 0.01, 0.01, 0.01, 0.02, 0.02, 0.02, 0.02, 0.03, 0.03, 0.03, 0.05, 0.05, 0.05, 0.05, 0.1, 0.2, 0.3, 0.3, 0.3, 0.3, 0.35, 0.35, 0.35, 0.35, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.45, 0.45, 0.7, 0.7, 0.75, 0.75, 0.75, 0.75, 0.8, 0.8, 0.8, 0.8, 0.8, 0.85, 0.9, 0.9, 0.9, 0.9, 0.9]
+\[0.01, 0.01, 0.01, 0.01, 0.02, 0.02, 0.02, 0.02, 0.03, 0.03, 0.03, 0.05, 0.05, 0.05, 0.05, 0.1, 0.2, 0.3, 0.3, 0.3, 0.3, 0.35, 0.35, 0.35, 0.35, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.45, 0.45, 0.7, 0.7, 0.75, 0.75, 0.75, 0.75, 0.8, 0.8, 0.8, 0.8, 0.8, 0.85, 0.9, 0.9, 0.9, 0.9, 0.9]
 Please input the name of the output file:output.txt
